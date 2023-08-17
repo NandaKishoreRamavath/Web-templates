@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse-over template</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* cursor: none; */
+        }
+        body{
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            border: 2px solid white;
+        }
+        .mini-circle{
+            position: absolute;
+            background-color: aliceblue;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            transition: 0.00000001s;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="mini-circle"></div>
+
+    <script>
+        const circle = document.querySelector('.mini-circle');
+        window.addEventListener("mousemove",function (dets){
+            var x = dets.clientX -7;
+            var y = dets.clientY-9;
+            circle.style.transform = 'translate(' + x  + 'px, ' + y + 'px)';
+        })
+    </script>
+</body>
+</html>
