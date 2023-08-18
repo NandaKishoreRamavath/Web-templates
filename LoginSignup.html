@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="./assets/physio-balls.png">
+    <link rel="stylesheet" href="./LoginSignup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Split Karo</title>
+</head>
+<body>
+    <section class="container" id="main">
+        <div class="sign-up">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>Continue through email</p>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="pswd" placeholder="Password" required>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="log-in">
+            <form action="#">
+                <h1>Log In</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>login using email</p>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="pswd" placeholder="Password" required>
+                <a href="#">Forgot password</a>
+                <button>Log In</button>
+            </form>
+        </div>
+        <div class="side-container">
+            <div class="overlay">
+                <div class="left-side">
+                    <h1>Welcome back!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur odit harum repudiandae fugit obcaecati autem.</p>
+                    <button id="logInBtn">Log In</button>
+                </div>
+                <div class="right-side">
+                    <h1>Hey Dost!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur odit harum repudiandae fugit obcaecati autem.</p>
+                    <button id="signUpBtn">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        
+        const SignUpButton = document.getElementById('signUpBtn');
+        const LogInButton = document.getElementById('logInBtn');
+        const MAIN = document.getElementById('main');
+
+        SignUpButton.addEventListener("click", () => {
+            MAIN.classList.add("right-panel-active");
+        });
+        LogInButton.addEventListener("click", () => {
+            MAIN.classList.remove("right-panel-active");
+        });
+
+    </script>
+</body>
+</html>
